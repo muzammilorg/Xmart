@@ -3,3 +3,10 @@
 .active_heading{
     color: $primaryColor;
 }
+
+.form-control:focus {
+    background-color: transparent !important;
+    border-color: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}

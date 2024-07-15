@@ -1,0 +1,37 @@
+@import '../../theme.scss';
+
+.navbar_container{
+    background-color: $pageBackground !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    .nav_link_item{
+        font-weight: 500;
+        padding: 2px;
+        position: relative;
+        transition: all 0.3s ease !important;
+
+        &:hover{
+            color: $primaryColor  !important;
+
+        }
+
+        &::before{
+            position: absolute !important;
+            content: '' !important;
+            width: 0% !important;
+            height: 2px !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            background-color: $dark !important;
+            transition: all 0.3s ease !important;
+        }
+        &:hover::before{
+            background-color: $primaryColor !important;
+            width: 100% !important;
+        }
+    }
+
+
+   
+     
+}
