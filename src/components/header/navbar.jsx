@@ -35,7 +35,7 @@ export const Navbar = () => {
                         </li>
                         <li className="nav-item mx-3">
 
-                        <NavLink to='/auth/sign-up' className={`${styles.nav_link_item} nav-link active`}>Sign Up</NavLink>
+                        <NavLink to='/auth/signup' className={`${styles.nav_link_item} nav-link active`}>Sign Up</NavLink>
                         </li>
 
 
