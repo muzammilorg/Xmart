@@ -1,0 +1,24 @@
+@import '../../theme.scss';
+
+.button_wrapper{
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.login_link{
+    text-decoration: none;
+    color: $dark;
+    font-weight: 500;
+    margin-left: 5px;
+    border-bottom: 1px solid $dark;
+    padding-bottom: 3px;
+}
+
+.forget_link{
+    text-decoration: none;
+    color: $primaryColor;
+    font-weight: 500;
+    font-size: 12px;
+    margin-left: 5px;
+    padding-bottom: 3px;
+}

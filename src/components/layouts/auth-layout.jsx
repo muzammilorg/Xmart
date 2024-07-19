@@ -15,7 +15,7 @@ export const AuthLayout = ({ children }) => {
                                 <img src={authBanner} alt="" />
                             </figure>
                         </div>
-                        <div className='col-6 m-0 p-0'>
+                        <div className='col-lg-6 col-sm-8 col-11 mx-auto p-0 '>
                             <div className={styles.form_wrapper}>
                             {children}
 

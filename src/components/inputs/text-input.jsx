@@ -3,11 +3,14 @@ import styles from './text-input.module.scss'
 
 export const  TextInput = (props) => {
   return (
-    <div> 
+
+    <>
+    <div className={styles.input_container} style={props.styles}> 
 
 
         <div className={styles.input_field}>
             <input 
+            placeholder={props.placeholder}
             type={props.type}
             value={props.value}
             onChange={(e)=> props.onChange(e.target.value)} />
@@ -15,5 +18,6 @@ export const  TextInput = (props) => {
         </div>
 
     </div>
+            </>
   )
 }
