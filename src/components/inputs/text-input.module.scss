@@ -6,6 +6,8 @@
     border-bottom: 1px solid $darkGray;
     width: 100%;
     padding: 5px 0px;
+
+    
 }
 
 .input_field {
@@ -16,4 +18,9 @@
         outline: none;
         width: 97%;
     }
+}
+
+.input_err{
+    font-size: 11px;
+    color: $primaryColor;
 }

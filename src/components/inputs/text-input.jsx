@@ -17,7 +17,11 @@ export const  TextInput = (props) => {
 
         </div>
 
+        
+
     </div>
+
+    {props.required && <div><small className={styles.input_err}>{props.err_msg ?? 'required'}</small></div>}
             </>
   )
 }
