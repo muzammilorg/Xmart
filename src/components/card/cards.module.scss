@@ -1,0 +1,21 @@
+@import '../../theme.scss';
+
+.category_card_container{
+    
+    border: $containerBorder;
+    padding-top: 10px;
+    width: 170px;
+    height: 145px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >p{
+
+        font-size: 16px;
+        font-weight: 500;
+        
+    }
+}

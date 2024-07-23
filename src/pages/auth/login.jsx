@@ -11,11 +11,11 @@ import { addUser } from '../../redux/features/user.slice'
 
 export const LoginPage = () => {
 
-  const [email , setEmail] = useState("")
-  const [password , setPassword] = useState("")
-  const [errors, setErrors] = useState({email: '', password: ''})
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [errors, setErrors] = useState({ email: '', password: '' })
   const [authError, setAuthError] = useState("")
- 
+
   const [loader, setLoader] = useState(false)
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -34,21 +34,21 @@ export const LoginPage = () => {
       passwordError = "Password must be atleast 8 characters"
     }
 
-    if (emailError || passwordError){
-      setErrors({email: emailError, password: passwordError})
-      
-    }else{
+    if (emailError || passwordError) {
+      setErrors({ email: emailError, password: passwordError })
+
+    } else {
       setLoader(true)
       try {
-        const payload = ({email, password})
+        const payload = ({ email, password })
         const response = await axios.post("https://dev-mart-server.vercel.app/api/user/login", payload)
-        
+
         console.log(response, 'Login Response');
         dispatch(addUser(response?.data?.data))
-        setErrors({email: '', password: ''})
+        setErrors({ email: '', password: '' })
         navigate('/')
         setLoader(false)
-        
+
       } catch (error) {
         console.log(error)
         setAuthError(error?.response?.data?.message)
@@ -61,8 +61,8 @@ export const LoginPage = () => {
 
   }
 
-return (
-<>
+  return (
+    <>
 
       <AuthLayout>
         <div>
@@ -70,14 +70,14 @@ return (
           <p className='auth_title mt-3'>Enter your details below</p>
 
           <form className='mt-3'>
-            <TextInput styles={{ }} required err_msg={errors.email} onChange={setEmail} value={email} placeholder="Email" type="email"   ></TextInput>
-            <TextInput styles={{ marginBottom: "5px" , marginTop: '20px'}} err_msg={errors.password} required onChange={setPassword} value={password} placeholder="Password" type="password"   ></TextInput>
+            <TextInput styles={{}} required err_msg={errors.email} onChange={setEmail} value={email} placeholder="Email" type="email"   ></TextInput>
+            <TextInput styles={{ marginBottom: "5px", marginTop: '20px' }} err_msg={errors.password} required onChange={setPassword} value={password} placeholder="Password" type="password"   ></TextInput>
             <small><Link className={styles.forget_link} to={'/auth/login'}>Forget Password</Link></small>
-          
-          <div className={styles.button_wrapper}>
-          <PrimaryButton loading={loader ? true : false} disabled={loader ? true : false} onClick={onSubmitLogin}>Log In</PrimaryButton>
-          {authError && <div className='text-end text-danger'><small>{authError}</small></div>}
-          </div>
+
+            <div className={styles.button_wrapper}>
+              <PrimaryButton loading={loader ? true : false} disabled={loader ? true : false} onClick={onSubmitLogin}>Log In</PrimaryButton>
+              {authError && <div className='text-end text-danger'><small>{authError}</small></div>}
+            </div>
           </form>
 
           <span>Dont have'nt Account? <Link className={styles.login_link} to={'/auth/signup'}>Sign up</Link></span>

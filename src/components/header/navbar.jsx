@@ -7,6 +7,7 @@ import { Searchbar } from '../search-bar/search-bar'
 import { ShoppingCart } from '../cart/shopping-cart'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeUser } from '../../redux/features/user.slice'
+import logo from '../../assets/xmart_logo.png'
 
 export const Navbar = () => {
 
@@ -24,7 +25,10 @@ export const Navbar = () => {
             <Sidebar></Sidebar>
             <nav className={`navbar navbar-expand-lg ${styles.navbar_container}`}>
                 <div className="container">
-                    <a className="navbar-brand" href="#">Xmart</a>
+                    <NavLink to={'/'}>
+                    <img className='logo_image' src={logo} alt="" />
+                    </NavLink>
+
                     <button className="navbar-toggler" onClick={() => sidebarOpen()} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
