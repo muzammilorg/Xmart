@@ -1,7 +1,7 @@
 @import '../../theme.scss';
 
-.category_card_container{
-    
+.category_card_container {
+
     border: $containerBorder;
     padding-top: 10px;
     width: 170px;
@@ -12,10 +12,70 @@
     justify-content: center;
     align-items: center;
 
-    >p{
+    >p {
 
         font-size: 16px;
         font-weight: 500;
-        
+
+    }
+}
+
+
+
+.product_card_container {
+    // border: 2px solid black;
+    width: 250px;
+
+    .product_image_container {
+        height: 250px;
+        background-color: $lightGrey2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 75%;
+            height: 75%;
+            
+        }
+    }
+
+    .content_container {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        .product_detail {
+            h6 {
+                font-weight: 600;
+            }
+
+            p {
+                color: $primaryColor;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+            }
+
+            
+            }
+            .cart_icon {
+
+                width: 30px;
+                height: 30px;
+                // background-color: red;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $darkGray;
+                border: 2px solid $darkGray;
+                transition: ease-in 0.3s;
+                cursor: pointer;
+        }
+        .cart_icon:hover{
+            background-color: $darkGray;
+            color: #fff;
+        }
     }
 }
