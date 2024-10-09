@@ -9,7 +9,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addUser } from '../../redux/features/user.slice'
 
-export const LoginPage = () => {
+const LoginPage = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -89,3 +89,5 @@ export const LoginPage = () => {
 
   )
 }
+
+export default LoginPage;

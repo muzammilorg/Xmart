@@ -10,7 +10,7 @@ import axios from 'axios'
 import { addUser } from '../../redux/features/user.slice'
 
 
-export const SignupPage = () => {
+const SignupPage = () => {
 
   const [name , setName] = useState("")
   const [email, setEmail] = useState("")
@@ -91,3 +91,6 @@ export const SignupPage = () => {
     </>
   )
 }
+
+
+export default SignupPage;

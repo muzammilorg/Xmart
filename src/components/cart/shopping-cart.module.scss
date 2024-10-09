@@ -1,5 +1,63 @@
 @import '../../theme.scss';
 
-.cart_icon{
+.cart_icon {
     width: 25px;
- }
+    cursor: pointer;
+}
+
+
+
+.product_quantity_counter {
+    width: 150px;
+    height: 40px;
+    border: $containerBorder;
+    background-color: $white;
+    border-radius: 6px;
+
+    .counter_value{
+        font-weight: 500    ;
+        
+    }
+
+    .product_update_counter {
+        display: block;
+        background-color: $white;
+        width: 40px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        color: $darkGray;
+
+        &:first-child{
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            border-right: $containerBorder;
+        }
+        &:last-child{
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-left: $containerBorder;
+
+        }
+        &:hover{
+            background-color: $primaryColor;
+            color: $white;
+        }
+    }
+}
+
+
+.product_quantity_counter_small{
+    width: 100px;
+    height: 30px;
+    .counter_value{
+        font-size: 14px ;
+        font-weight: 400;
+    }
+    .product_update_counter{
+        width: 25px;
+    }
+}

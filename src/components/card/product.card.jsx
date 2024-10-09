@@ -5,31 +5,35 @@ import { FaCartPlus } from "react-icons/fa6";
 import { Rating } from 'react-simple-star-rating'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import useShoppingCart from '../../hooks/use-shoppingcart';
 
 
 
 
-export const ProductCard = ({data}) => {
-  const isLogin = useSelector(state => state.user.isLogin)
-  const navigate = useNavigate() 
+export const ProductCard = ({ data }) => {
+  const navigate = useNavigate();
+  const { addToCart } = useShoppingCart()
+
 
 
 
   return (
     <>
-      <div className={`${styles.product_card_container} `}>
+      <div className={`${styles.product_card_container} `} onClick={() => navigate('/product-info')}>
         <div className={styles.product_image_container}>
           <img src={data.images} alt="" />
         </div>
         <div className={styles.content_container}>
           <div className={styles.product_detail}>
-            <div style={{width: '170px'}}><h6>{data.name}</h6></div>
+            <div style={{ width: '170px' }}><h6>{data.name}</h6></div>
             <p>{`Price $${data.price}`}</p>
 
             <Rating initialValue={`${data.rating}`} readonly={false} allowFraction={true} size={20} />
           </div>
           <div className={styles.cart_icon}>
-            <FaCartPlus onClick={()=> (isLogin ? alert('Item added to cart successfully') : navigate("/auth/signup"))} />          
+            <FaCartPlus onClick={(e) => {
+              e.stopPropagation();
+              addToCart(data)}} />
           </div>
         </div>
       </div>

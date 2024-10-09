@@ -6,7 +6,7 @@ import { ProductCard } from '../../components/card/product.card'
 import dummyData from '../../services/dummy.product.data.json'
 
 
-export const Products = () => {
+const Products = () => {
   return (
     <>
     <PageLayout>
@@ -31,3 +31,6 @@ export const Products = () => {
     </>
   )
 }
+
+
+export default Products;

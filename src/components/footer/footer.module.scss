@@ -1,9 +1,111 @@
 @import '../../theme.scss';
 
-.footerbar_container {
+.footer_container {
+    height: 51vh;
+    width: 100%;
     background-color: $dark;
-    color: $darkGray ;
-    padding: 10px;
-    text-align: center;
-    font-size: 12px;
+    color: $white ;
+
+    .footer_section {
+        height: 40vh;
+        margin-top: 10px;
+        padding: 14px;
+
+        h4 {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        h5 {
+            font-size: 17px;
+            font-weight: 500;
+
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        li {
+            list-style: none;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .email_input {
+            border: 1px solid $white;
+            padding: 5px 15px;
+            border-radius: 8px;
+
+            input {
+                background-color: transparent;
+                border: none;
+            }
+
+            input::placeholder {
+                color: $darkGray;
+            }
+        }
+
+
+
+        .footer_deal {
+            font-size: 11px;
+            color: $darkGray;
+            font-weight: 700;
+        }
+
+        .footer_icons {
+
+
+            img {
+                width: 17px;
+                cursor: pointer;
+            }
+
+
+        }
+
+    }
+
+    .footer_section:first-child {
+        min-width: 250px;
+    }
+
+    .footer_section:last-child {
+        min-width: 200px;
+    }
+
+
+
+    .footerbar_container {
+        padding: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    .footer_container {
+        height: 65vh;
+        width: 100%;
+
+        .footer_section {
+            height: 18vh;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer_container {
+        height: 84vh;
+        width: 100%;
+
+        .footer_section {
+            height: 25vh;
+            }
+    }
 }

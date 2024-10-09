@@ -21,7 +21,8 @@ const bannerImages = [
   banner2,
   banner3
 ]
-export const HomePage = () => {
+
+const HomePage = () => {
 
   const navigate = useNavigate();
 
@@ -77,3 +78,5 @@ export const HomePage = () => {
     </>
   )
 }
+
+export default HomePage;

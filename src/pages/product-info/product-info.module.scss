@@ -1,0 +1,122 @@
+@import '../../theme.scss';
+
+.product_image_container {
+    >figure {
+        max-height: 400px;
+        min-height: 150px;
+
+        >img {
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+    }
+
+    .product_images_slider {
+        height: 125px;
+        // background-color: cadetblue;
+
+        
+    }
+}
+
+.product_content_container{
+    .product_title{
+        font-size: 35px;
+         @media screen and (max-width: 576px) {
+        font-size: 28px;
+            
+         }
+    }
+
+    .in_stock{
+        margin-top: 2px;
+        font-weight: 600;
+        padding-left: 8px;
+        border-left: 1px solid $darkGray;
+        color: rgb(33, 247, 183);
+    }
+
+    .product_price{
+        font-size: 25px;
+        font-weight: 400;
+ @media screen and (max-width: 576px) {
+    font-size: 20px;
+    
+ }
+
+    }
+
+    .product_desc{
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #000;
+
+    }
+
+    .product_color_variant{
+        .product_color_title{
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .color_box{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid $dark;
+            cursor: pointer;
+        }
+    }
+
+    .product_buy_counter{
+
+        >div:nth-child(2){
+            width: 150px;
+        }
+    }
+
+    .product_shipping_card{
+       max-width: 420px;
+       border: $containerBorder;
+       border-radius: 8px;
+
+       .shipping_card{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+
+        &:first-child{
+            border-bottom: $containerBorder;
+        }
+
+        figure{
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 !important;
+
+        }
+
+        h5{
+            font-weight: 600;
+        }
+
+        p{
+            font-weight: 500;
+            font-size: 13px;
+            margin: 0 !important;
+        }
+       }
+    }
+
+
+}
+
+
+

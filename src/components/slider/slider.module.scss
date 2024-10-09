@@ -41,3 +41,12 @@
         align-items: center;
     }
 }
+
+.product_other_images {
+
+    width: 125px;
+    height: 125px;
+    // border: 1px solid #000000;
+    object-fit: cover;
+    object-position: -100x;
+}
