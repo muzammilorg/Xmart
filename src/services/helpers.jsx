@@ -1,16 +1,23 @@
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   
-export const Helpers = {
-    validateEmail(email){
+export class Helpers {
+    static validateEmail(email){
         return emailRegex.test(email)
-    },
+    }
 
-    validatePassword(password){
+   static  validatePassword(password){
         return password.length > 7;
-    },
+    }
 
-    validateName(name){
+    static validateName(name){
         return name.length > 2;
+    }
+
+    static priceFormater(amount){
+        return new Intl.NumberFormat('es-US', {
+            style: 'currency',
+                currency: 'USD',
+        }).format(amount)
     }
 }

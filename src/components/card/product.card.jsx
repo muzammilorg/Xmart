@@ -6,6 +6,7 @@ import { Rating } from 'react-simple-star-rating'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import useShoppingCart from '../../hooks/use-shoppingcart';
+import { Helpers } from '../../services/helpers';
 
 
 
@@ -26,7 +27,7 @@ export const ProductCard = ({ data }) => {
         <div className={styles.content_container}>
           <div className={styles.product_detail}>
             <div style={{ width: '170px' }}><h6>{data.name}</h6></div>
-            <p>{`Price $${data.price}`}</p>
+            <p>{Helpers.priceFormater(data.price)}</p>
 
             <Rating initialValue={`${data.rating}`} readonly={false} allowFraction={true} size={20} />
           </div>

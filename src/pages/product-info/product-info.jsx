@@ -19,6 +19,7 @@ import ProductImagesSlider from '../../components/slider/product_images_slider'
 import useShoppingCart from '../../hooks/use-shoppingcart'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { Helpers } from '../../services/helpers'
 
 const ProductInfoPage = () => {
 
@@ -62,7 +63,7 @@ const ProductInfoPage = () => {
                                     <div><Rating initialValue={singleProduct.rating} readonly={false} size={20} /></div>
                                     <span className={styles.in_stock}>In Stock</span>
                                 </div>
-                                <p className={`${styles.product_price}  mt-lg-0 mt-2`}>${singleProduct.price}</p>
+                                <p className={`${styles.product_price}  mt-lg-0 mt-2`}>{Helpers.priceFormater(singleProduct.price)}</p>
                                 <p className={styles.product_desc}>{singleProduct.description}</p>
 
                                 <div className={`${styles.product_color_variant} d-flex gap-2 aling-items-center`}>
