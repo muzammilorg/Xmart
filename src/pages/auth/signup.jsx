@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { Helpers } from '../../services/helpers'
 import axios from 'axios'
 import { addUser } from '../../redux/features/user.slice'
+import { baseUrl } from '../../services/constant'
 
 
 const SignupPage = () => {
@@ -46,7 +47,7 @@ const SignupPage = () => {
       setLoader(true)
       try {
         const payload = ({email, password, name})
-        const response = await axios.post("https://dev-mart-server.vercel.app/api/user/signup", payload)
+        const response = await axios.post(baseUrl + "/users/signup", payload)
         
         console.log(response, 'Signup Response');
         dispatch(addUser(response?.data?.data))

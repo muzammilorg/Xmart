@@ -8,6 +8,7 @@ import { Helpers } from '../../services/helpers'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addUser } from '../../redux/features/user.slice'
+import { baseUrl } from '../../services/constant'
 
 const LoginPage = () => {
 
@@ -41,7 +42,7 @@ const LoginPage = () => {
       setLoader(true)
       try {
         const payload = ({ email, password })
-        const response = await axios.post("https://dev-mart-server.vercel.app/api/user/login", payload)
+        const response = await axios.post(baseUrl+"/users/login", payload)
 
         console.log(response, 'Login Response');
         dispatch(addUser(response?.data?.data))
@@ -72,7 +73,7 @@ const LoginPage = () => {
           <form className='mt-3'>
             <TextInput styles={{}} required err_msg={errors.email} onChange={setEmail} value={email} placeholder="Email" type="email"   ></TextInput>
             <TextInput styles={{ marginBottom: "5px", marginTop: '20px' }} err_msg={errors.password} required onChange={setPassword} value={password} placeholder="Password" type="password"   ></TextInput>
-            <small><Link className={styles.forget_link} to={'/auth/login'}>Forget Password</Link></small>
+            <small><Link className={styles.forget_link} to={'/auth/forgot-password'}>Forget Password</Link></small>
 
             <div className={styles.button_wrapper}>
               <PrimaryButton loading={loader ? true : false} disabled={loader ? true : false} onClick={onSubmitLogin}>Log In</PrimaryButton>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './primary-button.module.scss'
 
-export const PrimaryButton = (props) => {
+export  const PrimaryButton = (props) => {
     return (
 
         <>
@@ -17,3 +17,5 @@ export const PrimaryButton = (props) => {
 
     )
 }
+
+

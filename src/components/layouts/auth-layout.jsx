@@ -3,7 +3,7 @@ import { PageLayout } from './page-layout'
 import authBanner from '../../assets/auth-banner.png'
 import styles from './layouts.module.scss';
 
-export const AuthLayout = ({ children }) => {
+export  const AuthLayout = ({ children }) => {
     return (
         <>
             <PageLayout>
@@ -28,3 +28,5 @@ export const AuthLayout = ({ children }) => {
         </>
     )
 }
+
+

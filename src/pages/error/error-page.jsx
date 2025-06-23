@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageLayout } from '../../components/layouts/page-layout';
 import styles from './error-page.module.scss'
-import { PrimaryButton } from '../../components/buttons/primary-button';
+import {PrimaryButton} from '../../components/buttons/primary-button';
 import { useNavigate } from 'react-router-dom';
 
 const ErrorPage = () => {

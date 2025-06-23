@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './text-input.module.scss'
 
-export const  TextInput = (props) => {
+export  const  TextInput = (props) => {
   return (
 
     <>
@@ -25,3 +25,5 @@ export const  TextInput = (props) => {
             </>
   )
 }
+
+
